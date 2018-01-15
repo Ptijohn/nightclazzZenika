@@ -1,12 +1,13 @@
 from pymongo import MongoClient
+from pymongo.errors import WriteConcernError
 
 # Connection to the database
-client = MongoClient(host=['nightclazz-mongo1:27017','nightclazz-mongo2:27018'],replicaset='myReplica')
-db = client.tododb
+client = MongoClient(host=['nightclazz-mongo1:27017','nightclazz-mongo2:27018'],replicaset='myReplica',retryWrites=True,w=2)
+db = client.test
 
-items = db.tododb.find()
-
-for item in items:
-	print item
-
+for i in range(2000):
+	try: 
+		db.test.insert_one({'a':i})
+	except WriteConcernError:
+		print "Exception thrown, what do we do?"
 

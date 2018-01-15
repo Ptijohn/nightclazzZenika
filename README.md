@@ -14,7 +14,7 @@ This repository is made for zenika nightclazz, a bunch of scripts to execute to 
  * Go to 2-start-mongo and execute docker-run.sh
  * If need be, you can use docker-clean.sh to totally erase the MongoDB instance (beware, you'll lose Data if you do that)
 
-## Getting some stuff into MongoDB
+## Getting some stuff into MongoDB (optional for now, you can go directly to step 4)
 
  * Go to 3-init-data and execute docker-run.sh
  * Note the --drop in the command line, it drops the collection before inserting the data, allowing you to start from scratch easily
