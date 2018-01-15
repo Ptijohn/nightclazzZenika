@@ -27,3 +27,7 @@ docker exec -it mongodb-nightclazz1 mongo --eval 'rs.add("nightclazz-mongo1:2701
 docker exec -it mongodb-nightclazz1 mongo --eval 'rs.add("nightclazz-mongo2:27018")'
 docker exec -it mongodb-nightclazz1 mongo --eval 'rs.addArb("nightclazz-mongo3:27019")'
 
+sleep 3
+
+docker exec -it mongodb-nightclazz1 mongo --eval 'db.adminCommand( { setFeatureCompatibilityVersion: "3.6" } )'
+
