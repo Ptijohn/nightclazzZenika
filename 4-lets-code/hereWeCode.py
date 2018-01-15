@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 
-client = MongoClient(host=['nightclazz-mongo:27017'])
+# Connection to the database
+client = MongoClient(host=['nightclazz-mongo1:27017','nightclazz-mongo2:27018'],replicaset='myReplica')
 db = client.tododb
 
 items = db.tododb.find()
