@@ -82,8 +82,3 @@ db.objectToArray.aggregate(
 )
 ```
 
-## Getting some stuff into MongoDB (optional, no purpose for now)
-
- * Go to old-init-data and execute docker-run.sh
- * Note the --drop in the command line, it drops the collection before inserting the data, allowing you to start from scratch easily
-
