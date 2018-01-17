@@ -1,1 +1,3 @@
 2-start-mongo/data
+5-aggregation/.dbshell
+5-aggregation/.mongorc.js

@@ -55,7 +55,7 @@ This repository consists in a bunch of scripts to execute to test new MongoDB 3.
 ### Array to Object
  * Use the `docker-run.sh` to load some data in MongoDB
  * Use `connect_to_mongodb.sh` to launch the shell
- * Launch this command :
+ * Launch this command to test `$arrayToObject`:
 ```javascript
 db.arrayToObject.aggregate(
    [
@@ -63,6 +63,19 @@ db.arrayToObject.aggregate(
          $project: {
             item: 1,
             dimensions: { $arrayToObject: "$dimensions" }
+         }
+      }
+   ]
+)
+```
+ * Launch this command to test `$objectToArray`:
+```javascript
+db.objectToArray.aggregate(
+   [
+      {
+         $project: {
+            item: 1,
+            dimensions: { $objectToArray: "$dimensions" }
          }
       }
    ]
