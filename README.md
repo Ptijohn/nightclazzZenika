@@ -1,6 +1,18 @@
-# Zenika Nightclazz
+# Zenika Nightclazz - Testing MongoDB 3.6 new features
 
-This repository is made for zenika nightclazz, a bunch of scripts to execute to test new MongoDB 3.6 features
+This repository consists in a bunch of scripts to execute to test new MongoDB 3.6 features.
+
+# Prerequities
+
+ * Linux
+ * Docker
+ * Aaaaaand, that's all folks
+
+# Knowledge necessary
+
+ * Basic Docker (you can do without this)
+ * Basic MongoDB
+ * Basic Python
 
 # How to Use
 
