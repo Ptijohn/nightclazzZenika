@@ -1,3 +1,6 @@
 2-start-mongo/data
 5-aggregation/.dbshell
 5-aggregation/.mongorc.js
+Windows/2-start-mongo/data
+Windows/5-aggregation/.dbshell
+Windows/5-aggregation/.mongorc.js

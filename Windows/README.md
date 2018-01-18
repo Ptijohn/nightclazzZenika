@@ -1,10 +1,13 @@
-# Zenika Nightclazz - Testing MongoDB 3.6 new features
+# Zenika Nightclazz - Testing MongoDB 3.6 new features - Windows
 
 This repository consists in a bunch of scripts to execute to test new MongoDB 3.6 features.
+Please note that this is almost the same as the linux version, as Powershell can execute shell scripts.
+There are just a few specific things linked to the creation of MongoDB (Part 2).
+See https://hub.docker.com/_/mongo/ as to why there are problems with the use of docker volumes.
 
 # Prerequities
 
- * Linux
+ * Windows (Powershell)
  * Docker
  * Aaaaaand, that's all folks
 
@@ -13,10 +16,6 @@ This repository consists in a bunch of scripts to execute to test new MongoDB 3.
  * Basic Docker (you can do without this)
  * Basic MongoDB
  * Basic Python
-
-# For Windows (and possibly OSX)
-
-Go to the Windows folder and check the README. 
 
 # How to Use
 
@@ -27,6 +26,7 @@ Go to the Windows folder and check the README.
 
 ## Creating the MongoDB Database
 
+ * Here, the main difference (with the Linux version) is that we don't control where the data will be stored...
  * Go to 2-start-mongo and execute `docker-run.sh`
  * If need be, you can use `docker-clean.sh` to totally erase the MongoDB instances (beware, you'll lose Data if you do that)
  * Please note the setFeatureCompatibilityVersion fixed to 3.6, it allows us to test the retryable Writes.
