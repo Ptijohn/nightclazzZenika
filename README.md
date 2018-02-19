@@ -42,7 +42,7 @@ Go to the Windows folder and check the README.
  * To try and make it crash, please edit hereWeCode.py, and pass the retryWrites to False. And do again the above sequence, starting with a `docker-clean.sh` first.
  * To clean the database and put the PRIMARY back to its previous state, go to `docker exec -it mongodb-nightclazz2 mongo --port 27018` and do `db.test.drop()` followed by `rs.stepDown()`.
 
-## Testinig causal consistency
+## Testing causal consistency
 
  * Go to 4-causal-consistency and look at the script `hereWeCode.py`, it reads from MongoDB, without option, to get the actual state of data
  * It then opens a session, updates the document that we just read (or inserts if the document didn't exist)
