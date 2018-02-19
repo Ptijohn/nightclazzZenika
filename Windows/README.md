@@ -40,6 +40,7 @@ See https://hub.docker.com/_/mongo/ as to why there are problems with the use of
  * Go to the mongo terminal, and type `rs.stepDown()`, which is going to make the PRIMARY step down, creating a potential problem.
  * Except your `docker-run.sh` won't have crashed, and will keep writing as soon as a new PRIMARY is elected.
  * To try and make it crash, please edit hereWeCode.py, and pass the retryWrites to False. And do again the above sequence, starting with a `docker-clean.sh` first.
+ * To clean the database and put the PRIMARY back to its previous state, go to `docker exec -it mongodb-nightclazz2 mongo --port 27018` and do `db.test.drop()` followed by `rs.stepDown()`.
 
 ## Testinig causal consistency
 

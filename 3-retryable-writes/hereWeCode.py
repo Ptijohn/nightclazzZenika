@@ -9,6 +9,6 @@ db = client.test
 for i in range(1500):
 	try: 
 		db.test.insert_one({'a':i})
-	except WriteConcernError:
-		print "Exception thrown, what do we do?"
+	except WriteConcernError, err:
+		print WriteConcernError, err
 
