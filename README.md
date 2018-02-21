@@ -1,6 +1,7 @@
 # Zenika Nightclazz - Testing MongoDB 3.6 new features
 
 This repository consists in a bunch of scripts to execute to test new MongoDB 3.6 features.
+Link to presentation : https://docs.google.com/presentation/d/1jvRpxYWWBRzQQRirqreCkbu0q18fMN_K5C-JwG9yMOo/edit?usp=sharing
 
 # Prerequities
 
